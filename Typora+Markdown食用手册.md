@@ -8,7 +8,11 @@
 
 [toc]
 
-## ——简介：Typora和Markdown是什么
+
+
+==如有问题直接联系QQ：3199236914==
+
+## 简介：Typora和Markdown是什么
 
 简单来说，**Markdown是一种语言，Typora是翻译和编辑Markdown的软件**
 
@@ -78,6 +82,8 @@ typora安装后
 
 
 ## Typora食用方法
+
+### 快捷键
 
 - 加粗： `Ctrl + B`
 - 标题： `Ctrl + H`
@@ -340,15 +346,23 @@ _   下划线
 
 ### 关于图床
 
-在使用Typora上传笔记时，我们的截图在上传后无法显示只出现一个链接，或者直接把图片上传到github上面时每次打开博客图片都会加载一段时间，为了**让图片加载的时间更快，并且可以在上传的笔记当中显示自己的图片**，我们需要用到 **图床**。
+在使用Typora上传笔记时，我们的截图在上传后无法显示只出现一个本地链接（因为你的图片是保存在你的电脑本地的没有一并上传），或者直接把图片上传到github上面时每次打开博客图片都会加载一段时间，为了**让图片加载的时间更快，并且可以在上传的笔记当中显示自己的图片**，我们需要用到 **图床**。
+
+而Typora较新的版本中支持使用Picgo快捷上传图片到图床，可以说非常方便了。
+
+
 
 + 阿里云OSS图床需要付费，但是价格非常便宜，一年可能10块钱左右。
 
+  
+
+### 使用Picgo上传图床
 
 
-### 安装
 
-#### Typora： [Typora 官方中文站 ](https://typoraio.cn/)
+#### 安装
+
+##### Typora： [Typora 官方中文站 ](https://typoraio.cn/)
 
 最新版本的Typora需要付费，但是可以安装历史版本
 
@@ -356,7 +370,7 @@ _   下划线
 
 
 
-#### Picgo: [PicGo ](https://github.com/Molunerfinn/PicGo/releases)
+##### Picgo: [PicGo ](https://github.com/Molunerfinn/PicGo/releases)
 
 下滑找到这个文档安装
 
@@ -364,7 +378,9 @@ _   下划线
 
 
 
-#### 阿里云OSS
+#### 图床准备
+
+##### 阿里云OSS
 
 + 进入 [阿里云](https://www.aliyun.com/product/oss)
 
@@ -372,7 +388,7 @@ _   下划线
 
 + 进入控制台
 
-  ![image-20220514141748130](https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656441.png )
+  ![image-20220514141748130](https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656441.png ) 
 
 + 选择对象储存并开通
 
@@ -438,11 +454,9 @@ _   下划线
 
 
 
-### 配置
+#### 配置
 
-
-
-#### PicGo
+##### PicGo
 
 打开picgo后，在你windows的**状态栏**里找到picgo的图标，打开picgo的主界面
 
@@ -478,7 +492,7 @@ _   下划线
 
 
 
-#### Typora
+##### Typora
 
 进入typora主界面，点击左上角的“文件-偏好设置”
 
@@ -486,7 +500,7 @@ _   下划线
 
 - 插入图片时`上传图片`
 
-- 下面的选项全勾上【更新22.03.05: 第二个`网络位置的图片`可以不勾，避免已经上传到图床的图片重复上传】
+- 下面的选项全勾上【更新22.03.05: 第二个`网络位置的图片`建议不勾，避免已经上传到图床的图片重复上传】
 
 - 上传服务选择`PicGo(app)`
 
@@ -500,3 +514,179 @@ _   下划线
   如果弹出以下弹窗，我们的图床就搞定了！
 
   <img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656486.png" alt="image-20220514150119179" style="zoom:67%;" /> 
+
+
+
+
+
+### 使用Picgo-Core
+
+用Picgo和picgo-Core没有太多实际影响，Picgo有自己的界面所以用起来会更简单一些，而Picgo-Core就需要自己手动去做一些东西了。
+
+所以这部分我推荐
+
++ 追求轻量化，不喜欢下载安装太多软件
+
++ 不觉得看到代码要写东西就烦的
+
+如果你比较符合，也可以试试Picgo-Core（其实也没有太难用）
+
+由于做这个教程的学长并不是统一的图床，所以我这里以`Github`图床讲解
+
+#### 下载
+
+##### Picgo-Core
+
+在Typora上选择`文件`---`偏好设置`---`图像`
+
+然后直接从Typora下载Picgo-Core即可
+
+![image-20221013180825048](https://gitee.com/qissqi/Pic/raw/master/img/image-20221013180825048.png)
+
+
+
+##### nodejs
+
+[nodejs]: https://nodejs.org/en/
+
+可能会需要用到
+
+
+
+#### 图床准备
+
+##### Github
+
+在你的GIthub上创建一个仓库，专门用于存储你上传的图片
+
+![image-20221013172430266](https://gitee.com/qissqi/Pic/raw/master/img/image-20221013172430266.png)
+
+
+
+仓库名字任意，仓库要选择`Public`公开访问
+
+![image-20221013172622865](https://gitee.com/qissqi/Pic/raw/master/img/image-20221013172622865.png)
+
+
+
+然后要在设置中生成token
+
+![image-20221013172855376](https://gitee.com/qissqi/Pic/raw/master/img/image-20221013172855376.png)
+
+
+
+![image-20221013172943457](https://gitee.com/qissqi/Pic/raw/master/img/image-20221013172943457.png)
+
+
+
+![image-20221013173031708](https://gitee.com/qissqi/Pic/raw/master/img/image-20221013173031708.png)
+
+
+
+中间的Expiration是token的有效日期，可以看情况选择，如果打算一直用也可以设置成无限期
+
+然后下方的选择勾选第一个`repo`即可，选择完后点击下方按钮生成token
+
+![image-20221013173347785](https://gitee.com/qissqi/Pic/raw/master/img/image-20221013173347785.png)
+
+
+
+生成后这里会给出一串代码，这串代码**只会出现一次，所以要记得及时复制**
+
+![image-20221013173845343](https://gitee.com/qissqi/Pic/raw/master/img/image-20221013173845343.png)
+
+
+
+##### 配置
+
+
+
+可以在typora打开配置文件
+
+![image-20221013191010022](https://gitee.com/qissqi/Pic/raw/master/img/image-20221013191010022.png)
+
+
+
+然后填入以下代码
+
+```
+{
+  "picBed": {
+    "current": "github",
+    "uploader": "github",
+    "transformer": "path",
+    "github": {
+      "repo": "qissqi/PicBed",      //这里引号内填上 [用户名]/[仓库名]
+      "branch": "main",
+      "token": "",  				//这里填复制下来的token
+      "path": "Img/",   			//上传的图片会保存到仓库里的这个路径下
+      "customUrl": ""				//自定义url，可以不填
+    }
+  },
+  "picgoPlugins": {}
+}
+```
+
+完成后保存文件
+
+然后在图像设置中验证上传
+
+![image-20221013201609010](https://gitee.com/qissqi/Pic/raw/master/img/20221013-2016.png)
+
+
+
+
+
+![image-20221013205917164](https://gitee.com/qissqi/Pic/raw/master/img/20221013-205919.png)
+
+验证成功即可正常使用
+
+
+
+#### 插件
+
+##### 前置
+
+请确保nodejs已安装
+
+（按win+R，输入cmd并打开cmd窗口，在窗口输入`node -v `，回车，出现版本号即安装成功）
+
+
+
+找到你的picgo-core所在路径
+
+以我的路径为例
+
+C:\Users\username\AppData\Roaming\Typora\picgo\win64
+
+或者也可以使用everything软件，搜索picgo.exe
+
+
+
+##### 防重名
+
+在使用时，有时候我们会出现图片名字与之前上传过的图片重名的情况
+
+找到后，打开cmd窗口（win+R，输入cmd），输入`cd picgo所在路径名`，回车后输入`picgo install super-prefix `
+
+等待插件下载完成
+
+然后在配置文件里添加以下代码
+
+```
+"picgo-plugin-super-prefix": {
+	"fileFormat": "YYYYMMDD-HHmmss"
+}
+```
+
+重新上传图片，不会出现重名的情况了
+
+
+
+## 
+
+## 关于Typora绘制图（表）
+
+由于这个对一些人来说不一定方便，可能不会用，所以就没有单独制作教程
+
+直接[仙人指路👈](https://blog.csdn.net/weixin_43775143/article/details/106212765?utm_term=typora表格&utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-0-106212765&spm=3001.4430)
