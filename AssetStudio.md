@@ -74,7 +74,7 @@ AssetStudio是一个对**Unity游戏**进行拆包的工具，从而提取出游
 
 
 <details style="color:black">
-<summary style="color:rgba(0,0,0,0)"></summary>
+<summary style="color:white"></summary>
     <p>包括在这里找......</p>
     <p>AssetStudio的下载链接，应该没什么好说的</p>
     <p> <a href="https://github.com/Perfare/AssetStudio/releases?page=1">https://github.com/Perfare/AssetStudio/releases?page=1</a></p>
