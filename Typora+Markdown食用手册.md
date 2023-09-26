@@ -55,7 +55,7 @@ typora安装后
 
 >  提示：若文件名中未展示扩展名（.txt），请打开计算机，查看，勾选文件扩展名，使文件显示扩展名
 
-![img](https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210072142959.png) 
+![img](https://gitee.com/qissqi/Pic/raw/master/img/20230926-180015.png) 
 
 ---
 
@@ -67,7 +67,7 @@ typora安装后
 
 
 
-![img](https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210072137855.png)     
+![img](https://gitee.com/qissqi/Pic/raw/master/img/20230926-180038.png)     
 
 运行Typora，输入序列号
 
@@ -75,7 +75,7 @@ typora安装后
 
 出现已激活即可
 
-![image-20220601173354172](https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210072146738.png) 
+![image-20220601173354172](https://gitee.com/qissqi/Pic/raw/master/img/20230926-180053.png) 
 
 
 
@@ -374,13 +374,19 @@ _   下划线
 
 下滑找到这个文档安装
 
-<img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656474.png" alt="image-20220514141147756" style="zoom: 67%;" /> 
+<img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180107.png" alt="image-20220514141147756" style="zoom: 67%;" /> 
 
 
 
 #### 图床准备
 
-##### 阿里云OSS
+##### 阿里云OSS（不推荐）
+
+***！补充：购买阿里云的对象存储服务时请注意，除了需要存储服务的费用，还会产生流量费用（即浏览图片时产生的数据传输费用，详情：[流量费用_对象存储 OSS-阿里云帮助中心 (aliyun.com)](https://help.aliyun.com/zh/oss/product-overview/traffic-fees)），如果用于笔记之外的使用请多加留意。***
+
+***推荐使用免费的图床方式，可以参考下面的Picgo-Core方式的图床准备，配置方面方法都是相似的***
+
+
 
 + 进入 [阿里云](https://www.aliyun.com/product/oss)
 
@@ -388,11 +394,11 @@ _   下划线
 
 + 进入控制台
 
-  ![image-20220514141748130](https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656441.png ) 
+  ![image-20220514141748130](https://gitee.com/qissqi/Pic/raw/master/img/20230926-180118.png ) 
 
 + 选择对象储存并开通
 
-  <img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656485.png" alt="image-20220514142301211" style="zoom: 50%;" /> 
+  <img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180130.png" alt="image-20220514142301211" style="zoom: 50%;" /> 
 
 + 创建Bucket
 
@@ -404,9 +410,9 @@ _   下划线
 
   读写权限选 **公共读**
 
-  <img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656658.png" alt="image-20220514142426982" style="zoom: 67%;" /> 
+  <img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180140.png" alt="image-20220514142426982" style="zoom: 67%;" /> 
 
-  <img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656656.png" alt="image-20220514142833992" style="zoom: 67%;" /> 
+  <img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180149.png" alt="image-20220514142833992" style="zoom: 67%;" /> 
 
 + 找到地域节点
 
@@ -416,25 +422,25 @@ _   下划线
 
   > 如图只需要复制 `oss-cn-hangzhou`
 
-  <img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656569.png" style="zoom:67%;" /> 
+  <img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180203.png" style="zoom:67%;" /> 
 
 + 找到Key
 
   鼠标放右上角头像点击Key管理
 
-  ![image-20220514144341687](https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656394.png) 
+  ![image-20220514144341687](https://gitee.com/qissqi/Pic/raw/master/img/20230926-180215.png) 
 
   
 
   弹出的框选继续
 
-  <img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656507.png" alt="image-20220514144618765" style="zoom: 67%;" /> 
+  <img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180224.png" alt="image-20220514144618765" style="zoom: 67%;" /> 
 
   
 
   创建一个AccessKey ，在弹出的界面里，记住你的`accessKeyId`和`accessKeySecret`
 
-  <img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656533.png" alt="image-20220514144734301" style="zoom:67%;" /> 
+  <img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180247.png" alt="image-20220514144734301" style="zoom:67%;" /> 
 
   
 
@@ -450,7 +456,7 @@ _   下划线
   >
   >数据低于6GB的情况下直接充值，以GB付费其实比购买储存包更加值得！
 
-  <img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656396.png" alt="image-20220514145025157" style="zoom:67%;" /> 
+  <img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180311.png" alt="image-20220514145025157" style="zoom:67%;" /> 
 
 
 
@@ -460,7 +466,7 @@ _   下划线
 
 打开picgo后，在你windows的**状态栏**里找到picgo的图标，打开picgo的主界面
 
-<img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656746.png" style="zoom:67%;" /> 
+<img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180323.png" style="zoom:67%;" /> 
 
 在图床设置里面选择`阿里云OSS`，依照以下步骤填写信息
 
@@ -478,7 +484,7 @@ _   下划线
 
   它会**自动**在你的bucket里面创建一个文件夹，并把图片上传进去
 
-  ·<img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656899.png" alt="image-20220514145803053" style="zoom:67%;" /> 
+  ·<img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180342.png" alt="image-20220514145803053" style="zoom:67%;" /> 
 
 **弄完之后，记得“确定”，并点击“设置为默认图床”！**
 
@@ -486,7 +492,7 @@ _   下划线
 
 + 在设置中打开这两项
 
-  <img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656578.png" alt="image-20220514145942982" style="zoom: 67%;" /> 
+  <img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180357.png" alt="image-20220514145942982" style="zoom: 67%;" /> 
 
 
 
@@ -507,13 +513,13 @@ _   下划线
 - PicGo路径：找到picgo的安装路径
   **不是安装包的路径！！！！**
 
-  <img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656515.png" alt="image-20220514150042541" style="zoom:67%;" /> 
+  <img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180410.png" alt="image-20220514150042541" style="zoom:67%;" /> 
 
   设置完毕后，我们点击验证图片上传选项
 
   如果弹出以下弹窗，我们的图床就搞定了！
 
-  <img src="https://shadow-fy.oss-cn-chengdu.aliyuncs.com/img/202210111656486.png" alt="image-20220514150119179" style="zoom:67%;" /> 
+  <img src="https://gitee.com/qissqi/Pic/raw/master/img/20230926-180419.png" alt="image-20220514150119179" style="zoom:67%;" /> 
 
 
 
@@ -553,9 +559,11 @@ _   下划线
 
 
 
-#### 图床准备
+#### 图床准备（git仓库图床）
 
 ##### Github
+
+(使用gitee也是相似的方法，网上也有相关教程，使用gitee在国内网络加载速度更快)
 
 在你的GIthub上创建一个仓库，专门用于存储你上传的图片
 
@@ -682,8 +690,6 @@ C:\Users\username\AppData\Roaming\Typora\picgo\win64
 重新上传图片，不会出现重名的情况了
 
 
-
-## 
 
 ## 关于Typora绘制图（表）
 
